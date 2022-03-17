@@ -1,0 +1,41 @@
+SQL> CREATE TABLE STU(roll_no int NOT NULL,firstname VARCHAR(20),lastname VARCHAR(20),DOB date,gender VARCHAR(10));
+
+Table created.
+
+SQL> desc STU;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ROLL_NO                                   NOT NULL NUMBER(38)
+ FIRSTNAME                                          VARCHAR2(20)
+ LASTNAME                                           VARCHAR2(20)
+ DOB                                                DATE
+ GENDER                                             VARCHAR2(10)
+
+SQL> INSERT INTO STU VALUES('008','ardra','pdas','17-july-2000','female');
+
+1 row created.
+
+
+SQL> INSERT INTO STU VALUES('041','sivapriya','rajan','17-december-2000','female');
+
+1 row created.
+
+
+SQL> INSERT INTO STU VALUES('045','meera','s','25-october-2000','female');
+
+1 row created.
+
+SQL> INSERT INTO STU VALUES('005','anjali','anish','03-april-2000','female');
+
+1 row created.
+
+SQL> SELECT * FROM STU;
+
+   ROLL_NO FIRSTNAME            LASTNAME             DOB       GENDER
+---------- -------------------- -------------------- --------- ----------
+         8 ardra                pdas                 17-JUL-00 female
+        41 sivapriya            rajan                17-DEC-00 female
+        45 meera                s                    25-OCT-00 female
+         5 anjali               anish                03-APR-00 female
+
+SQL>

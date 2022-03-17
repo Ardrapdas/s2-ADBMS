@@ -1,0 +1,55 @@
+
+SQL> CREATE TABLE EMPLOYEE(emp_number number,ename VARCHAR(20));
+
+Table created.
+
+SQL> desc EMPLOYEE;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMP_NUMBER                                         NUMBER
+ ENAME                                              VARCHAR2(20)
+
+SQL> INSERT INTO EMPLOYEE VALUES('1800210','ardra');
+
+1 row created.
+
+SQL> SELECT * FROM EMPLOYEE;
+
+EMP_NUMBER ENAME
+---------- --------------------
+   1800210 ardra
+
+SQL> ALTER TABLE EMPLOYEE ADD (salary number(7,2));
+
+Table altered.
+
+SQL> SELECT * FROM EMPLOYEE;
+
+EMP_NUMBER ENAME                    SALARY
+---------- -------------------- ----------
+   1800210 ardra
+
+SQL> INSERT INTO EMPLOYEE VALUES('1000');
+INSERT INTO EMPLOYEE VALUES('1000')
+            *
+ERROR at line 1:
+ORA-00947: not enough values
+
+
+SQL> INSERT INTO EMPLOYEE VALUES('1800210','ardra','1000');
+
+1 row created.
+
+SQL> SELECT * FROM EMLOYEE;
+SELECT * FROM EMLOYEE
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> SELECT * FROM EMPLOYEE;
+
+EMP_NUMBER ENAME                    SALARY
+---------- -------------------- ----------
+   1800210 ardra
+   1800210 ardra                      1000
